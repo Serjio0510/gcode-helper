@@ -13,7 +13,6 @@ function calculateDistance() {
     return;
   }
   
-  console.log('input params:', {diameter, distanceToTop,index});
   const distanceToCenter = calculateDistanceToCenter(diameter, distanceToTop, index);
   resultElement.textContent = "Расстояние от центра диаметра до вершины паза: " + distanceToCenter.toFixed(2);
 }
