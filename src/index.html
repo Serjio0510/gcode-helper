@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычисление расстояния до вершины паза</title>
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Вычисление расстояния до вершины паза</h1>
+        <div class="input-container">
+            <label for="diameter">Диаметр окружности:</label>
+            <input type="number" id="diameter" min="0">
+        </div>
+        <div class="input-container">
+            <label for="distanceToTop">Расстояние до вершины паза:</label>
+            <input type="number" id="distanceToTop" min="0">
+        </div>
+        <div class="index-container">
+          <label for="index">Допуск:</label>
+          <input type="number" id="index" min="0">
+      </div>
+        <button onclick="calculateDistance()">Вычислить</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
