@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вычисление расстояния до вершины паза</title>
-    <link rel="stylesheet" href="./src/mobile.css">
+    <title>Вычисление расстояния до вершины паза и ширины паза</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Вычисление расстояния до вершины паза</h1>
+        <h1>Вычисление расстояния до вершины паза и ширины паза</h1>
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'gapTab')" id="defaultOpen">Рассчитать высоту паза</button>
+            <button class="tablinks" onclick="openTab(event, 'gapWidthTab')">Рассчитать ширину паза</button>
+        </div>
+        <div id="gapTab" class="tabcontent">
         <div class="input-container">
             <label for="diameter">Диаметр окружности:</label>
             <input type="number" id="diameter" min="0">
@@ -24,6 +29,19 @@
         <button onclick="calculateDistance()">Вычислить</button>
         <div id="result"></div>
     </div>
-    <script src="./src/script.js"></script>
+    <div id="gapWidthTab" class="tabcontent">
+        <div class="input-container">
+            <label for="gapWidth">Ширина паза:</label>
+            <input type="number" id="gapWidth" min="0">
+        </div>
+        <div class="index-containertwo">
+            <label for="indextwo">Допуск:</label>
+            <input type="number" id="indextwo" min="0">
+          </div>
+        <button onclick="calculateGapWidth()">Вычислить</button>
+        <div id="gapResult"></div>
+    </div>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
