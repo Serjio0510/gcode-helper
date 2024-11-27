@@ -11,8 +11,6 @@ function openMainTab(evt, tabName) {
 
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.classList.add("active");
-    document.getElementById("mainButtons").style.display = "none";
-    document.getElementById("backButton").style.display = "block";
 }
 
 function goBack() {
@@ -582,9 +580,9 @@ function calculateTolerance() {
                 tolerance = 'Неверный класс точности';
         }
 
-        document.getElementById('resultDopusck').innerHTML = `Диаметр: ${diameterDop} мм <br>Класс точности: ${toleranceClass}<br> Допуск: ${tolerance}`;
+        document.getElementById('result').innerHTML = `Диаметр: ${diameterDop} мм <br>Класс точности: ${toleranceClass}<br> Допуск: ${tolerance}`;
     } else {
-        document.getElementById('resultDopusck').innerHTML = 'Введите диаметр в пределах от 0 до 3150 мм';
+        document.getElementById('result').innerHTML = 'Введите диаметр в пределах от 0 до 3150 мм';
     }
 }
 
@@ -3069,5 +3067,31 @@ searchInput.addEventListener('keyup', function() {
         const option = options[i];
         const txtValue = option.text.toLowerCase();
         option.style.display = txtValue.includes(filter) ? '' : 'none';
+    }
+});
+
+/// тёмная и светлая тема
+const themeToggleButton = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Проверяем, есть ли сохранённая тема в localStorage
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-theme');
+} else {
+    body.classList.add('light-theme');
+}
+
+// Обработчик события для переключения темы
+themeToggleButton.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    body.classList.toggle('light-theme');
+
+    // Сохраняем выбранную тему в localStorage
+    if (body.classList.contains('dark-theme')) {
+        localStorage.setItem('theme', 'dark');
+        themeToggleButton.textContent = '☀️'; // Изменяем иконку на солнце
+    } else {
+        localStorage.setItem('theme', 'light');
+        themeToggleButton.textContent = '🌙'; // Изменяем иконку на луну
     }
 });

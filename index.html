@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Помошник ЧПУ</h1>
+        <h1>MachinCalc</h1>
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
         <div class="tab-container">
             <div class="tab-buttons">
                 <button class="tab-button active" onclick="openMainTab(event, 'gapCalc')" id="defaultOpen">Паз</button>
@@ -48,6 +49,7 @@
         </div>
 
             <div id="angleCalc" class="tabcontent main-tabcontent" style="display:none;">
+                <img src="src/images/topPoint.png" class="imagesTop">
                 <h2>Угловые координаты</h2>
                 <input type="number" id="diameterBottom" placeholder="Диаметр (низ)">
                 <input type="number" id="angleBottom" placeholder="Угол (низ)">
@@ -120,7 +122,7 @@
 
             <!-- ДОПУСКИ И ПОСАДКИ -->
             <div id="dopusk" class="main-tabcontent" style="display:none;">
-                <h1>Допуски и посадки отверстий</h1>
+                <h2>Допуски и посадки отверстий</h2>
                 <div class="form-group">
                     <label for="diameterDop">Диаметр (мм):</label>
                     <input type="number" id="diameterDop" min="0" max="3150" placeholder="Введите диаметр">
@@ -230,7 +232,7 @@
                     </select>
                 </div>
                 <button class="calculate-button" onclick="calculateTolerance()">Вычислить</button>
-                <div id="resultDopusck" class="resultDopusck"></div>
+                <div id="result" class="result"></div>
                     </div>
         </div>
     </div>

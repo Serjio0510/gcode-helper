@@ -1,3 +1,4 @@
+.dark-theme {
 body {
   font-family: Arial, sans-serif;
   background-color: #121212;
@@ -153,7 +154,6 @@ div#resultDopusck {
 
 .form-group {
   margin-bottom: 15px;
-  margin-left: 15px;
 }
 
 .resultDopusck {
@@ -179,10 +179,212 @@ div#resultDopusck {
   background-color: #1e1e1e;
   border-radius: 3px;
   color:#e9ecef;
+  width: 120px;
  }
 
  .tab-buttons {
   overflow-x: auto; /* Включаем горизонтальный скролл */
   white-space: nowrap; /* Запрещаем перенос строк */
   padding: 10px;
+}
+
+.imagesTop {
+  position: fixed;
+  top: 262px; /* Расстояние от верхнего края */
+  right: 10px; /* Расстояние от правого края */
+  width: 143px; /* Ширина изображения */
+  height: 102px; /* Высота изображения */
+}
+
+.imagesTop {
+  position: fixed;
+  top: 28%; /* Расстояние от верхнего края */
+  right: 31.5%; /* Расстояние от правого края */
+  width: 37%; /* Ширина изображения */
+  height: auto; /* Высота изображения */
+}
+
+div#angleCalc.tabcontent.main-tabcontent{
+  margin-top: 40%;
+}
+}
+
+/*СВЕТЛАЯ ТЕМА*/
+.light-theme {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .tab-container {
+    margin-top: 20px;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .tab-button {
+    color: #1e1e1e;
+    flex: 1;
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .tab-button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .tab-button.active {
+    background-color: #007bff;
+    color: #1e1e1e;
+  }
+  
+  .tabcontent {
+    padding: 20px;
+    display: none;
+  }
+  
+  .tabcontent h2 {
+    margin-top: 0;
+  }
+  
+  input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .result {
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+  } 
+  /* ШЛИЦЫ */
+p1 {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+select{
+  padding: 0.5rem;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+}
+
+.results {
+  font-weight: 150;
+  margin-top: 10px;
+}
+
+
+/* КООРДИНАТЫ ОТВЕРСТИЙ */
+div#resultHole {
+  font-weight: 150;;
+  margin-top: 10px;
+}
+
+/* Впадина зуба */
+div#resultSocket {
+  font-weight: 150;
+  margin-top: 10px;
+}
+
+div#resultPitch {
+  font-weight: 150;
+  margin-top: 10px;
+}
+
+/* ДОПУСКИ И ПОСАДКИ */
+
+
+div#resultDopusck {
+  font-weight: 150;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.resultDopusck {
+  text-align-last: start;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+ b {
+  text-align: center;
+ }
+
+ p {
+  margin-top: -18px;
+  margin-left: 60px;
+  margin-bottom: auto;
+ }
+
+ input#searchInput {
+  border-radius: 3px;
+  width: 120px;
+ }
+
+ .tab-buttons {
+  overflow-x: auto; /* Включаем горизонтальный скролл */
+  white-space: nowrap; /* Запрещаем перенос строк */
+  padding: 10px;
+}
+
+.imagesTop {
+  position: fixed;
+  top: 28%; /* Расстояние от верхнего края */
+  right: 31.5%; /* Расстояние от правого края */
+  width: 37%; /* Ширина изображения */
+  height: auto; /* Высота изображения */
+}
+
+div#angleCalc.tabcontent.main-tabcontent{
+  margin-top: 40%;
+}
 }
