@@ -57,7 +57,7 @@ h1 {
 }
 
 .tabcontent h2 {
-  margin-top: -10px;
+  margin-top: 0px;
   margin-bottom: 5px;
 }
 
@@ -263,7 +263,7 @@ div#angleCalc.tabcontent.main-tabcontent{
   }
   
   .tabcontent h2 {
-    margin-top: -10px;
+    margin-top: 0px;
     margin-bottom: 5px;
   }
   
